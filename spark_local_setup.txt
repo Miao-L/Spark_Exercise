@@ -1,0 +1,24 @@
+(1) Install Spark via https://spark.apache.org/downloads.html
+
+
+(2) Verify Spark installation and location
+/Users/miaolin/Downloads/spark-3.5.6-bin-hadoop3
+
+(3) Add Spark's bin directory to your $PATH
+I have tried to run below code in terminal but no luck. Add the bin dir manually
+export SPARK_HOME="/path/to/spark-<version>-bin-hadoop<version>"
+export PATH="$SPARK_HOME/bin:$PATH"
+
+	a.Edit your .zshrc file:
+		nano ~/.zshrc
+	b.Add the following lines at the end of the file, replacing /path/to/spark-<version>-bin-hadoop<version> with the actual path you located in the previous
+
+export SPARK_HOME="/Users/miaolin/Downloads/spark-3.5.6-bin-hadoop3"
+export PATH="$SPARK_HOME/bin:$PATH"
+
+	c. Close and save 
+(4) Apply the changes. Run this in terminal
+source ~/.zshrc
+
+(5) Run spark-shell, you should see Spark shell prompt
+
